@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(DBus_C)
+project(dbus-c)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -20,7 +20,7 @@ add_executable(listener
 )
 
 
-target_link_libraries(sender systemd)
-target_link_libraries(listener systemd)
+target_link_libraries(sender libsystemd)
+target_link_libraries(listener libsystemd)
 
-# install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
