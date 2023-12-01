@@ -20,6 +20,7 @@ add_executable(listener
 )
 
 
-target_link_libraries(receiver systemd)
+target_link_libraries(sender systemd)
+target_link_libraries(listener systemd)
 
-install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
+# install(TARGETS receiver DESTINATION ${CMAKE_INSTALL_BINDIR})
